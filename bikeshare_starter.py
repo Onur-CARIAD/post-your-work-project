@@ -123,14 +123,12 @@ def main():
         city, month, day = get_filters()
         df = load_data(city, month, day)
 
-        time_stats(df)
-        station_stats(df)
-        trip_duration_stats(df)
-        user_stats(df)
+        for stat_func in [time_stats, station_stats, trip_duration_stats, user_stats]:
+            stat_func(df)
 
-        restart = input('\nWould you like to restart? Enter yes or no.\n')
-        if restart.lower() != 'yes':
+        if input("Restart? (yes/no): ").lower() != 'yes':
             break
+
 
 
 if __name__ == "__main__":
