@@ -34,5 +34,5 @@ Please check out the original repository [here](https://github.com/udacity/post-
 
 ## Date created
 
-This project and the related README were created in April 2026.
+This project was created in April 2026.
 
