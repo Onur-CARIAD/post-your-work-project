@@ -40,7 +40,17 @@ def load_data(city, month, day):
     Returns:
         df - Pandas DataFrame containing city data filtered by month and day
     """
+    df = pd.read_csv(CITY_DATA[city])
 
+    df['Start Time'] = pd.to_datetime(df['Start Time'])
+    df['month'] = df['Start Time'].dt.month_name().str.lower()
+    df['day_of_week'] = df['Start Time'].dt.day_name().str.lower()
+
+    if month != 'all':
+        df = df[df['month'] == month]
+
+    if day != 'all':
+        df = df[df['day_of_week'] == day]
 
     return df
 
@@ -123,13 +133,10 @@ def main():
         city, month, day = get_filters()
         df = load_data(city, month, day)
 
-        time_stats(df)
-        station_stats(df)
-        trip_duration_stats(df)
-        user_stats(df)
+        for stat_func in [time_stats, station_stats, trip_duration_stats, user_stats]:
+            stat_func(df)
 
-        restart = input('\nWould you like to restart? Enter yes or no.\n')
-        if restart.lower() != 'yes':
+        if input("Restart? (yes/no): ").lower() != 'yes':
             break
 
 
