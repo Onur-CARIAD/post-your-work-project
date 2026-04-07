@@ -1,17 +1,38 @@
->**Note**: Please **fork** the current Udacity repository so that you will have a **remote** repository in **your** Github account. Clone the remote repository to your local machine. Later, as a part of the project "Post your Work on Github", you will push your proposed changes to the remote repository in your Github account.
+# Bike Share Data Analysis
 
-### Date created
-Include the date you created this project and README file.
+A Python program for exploring bikeshare usage data from Chicago, New York City, and Washington.
+The script interactively filters the dataset by city, month, and day, then computes a variety of descriptive statistics.
 
-### Project Title
-Replace the Project Title
+## Running the script
 
-### Description
-Describe what your project is about and what it does
+<u>Requirements</u>
 
-### Files used
-Include the files used
+- Python 3.x
+- pandas
+- numpy
 
-### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+<u>Run:</u>
+```
+python bikeshare.py
+```
+You will be prompted to enter:
+```
+Hello! Let's explore some US bikeshare data!
+Which city would you like to analyze?
+Which month?
+Which day?
+```
+After the analysis, you will be asked:
+```
+Would you like to restart? Enter yes or no.
+```
+## Credits
+
+Special thanks to **Sarah Maris** (@sarah-udacity) for creating and maintaining the original  **post-your-work-project**.  
+Her work laid the foundation for this project. 
+Please check out the original repository [here](https://github.com/udacity/post-your-work-project.git)!
+
+## Date created
+
+This project and the related README were created in April 2026.
 
