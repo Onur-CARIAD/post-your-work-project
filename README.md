@@ -1,7 +1,7 @@
 # Bike Share Data Analysis
 
 A Python program for exploring bikeshare usage data from Chicago, New York City, and Washington.
-The script interactively filters the dataset by city, month, and day, then computes a variety of descriptive statistics.
+The script computes a variety of descriptive statistics interactively filtering the dataset by city, month, and day.
 
 ## Running the script
 
